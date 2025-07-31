@@ -2,6 +2,10 @@
 
 ## CRUD APIs with PHP for handling Movie Booking System.
 
+## ✨ Features
+- Foreign key concepts must have to be implemented with ON CASECADE criteria.
+- For all tables all types of CRUD APIs must have to be implemented.
+
 ##  IMAGES
 <img width="1920" height="1080" alt="Screenshot (58)" src="https://github.com/user-attachments/assets/4586b5b3-9dce-4d1e-acb3-746ec2bf3352" />
 <img width="1920" height="1080" alt="Screenshot (59)" src="https://github.com/user-attachments/assets/3592de96-44c6-4f59-bb35-1d713e095b5d" />
