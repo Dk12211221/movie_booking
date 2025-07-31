@@ -7,7 +7,7 @@ $id = $_GET['id'] ?? null;
 $method = $_SERVER['REQUEST_METHOD'];
 $input = json_decode(file_get_contents('php://input'), true);
 
-// Map of table configurations
+
 $tables = [
     'users' => ['pk' => 'user_id', 'cols' => ['name', 'email']],
     'movies' => ['pk' => 'movie_id', 'cols' => ['title', 'genre', 'duration']],
@@ -42,7 +42,7 @@ switch ($method) {
         $values = array_map(fn($col) => $input[$col], $cols);
         $placeholders = implode(', ', array_fill(0, count($cols), '?'));
         $stmt = $conn->prepare("INSERT INTO $table (" . implode(', ', $cols) . ") VALUES ($placeholders)");
-        $types = str_repeat('s', count($cols)); // assuming all string for simplicity
+        $types = str_repeat('s', count($cols)); 
         $stmt->bind_param($types, ...$values);
         $stmt->execute();
         echo json_encode(["message" => "$table record created"]);

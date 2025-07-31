@@ -20,7 +20,7 @@ switch ($method) {
         break;
 
     case 'POST':
-        $name, $location = $input['name']; $input['location'];
+        $name, $location = $input["name"]; $input["location"];
         $stmt = $conn->prepare("INSERT INTO theaters (name, location) VALUES (?, ?)");
         $stmt->bind_param("ss", $name, $location);
         $stmt->execute();
